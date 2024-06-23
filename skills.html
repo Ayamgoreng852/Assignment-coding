@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Personal Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+     
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; 
+            color: #046cff;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .header {
+            background-image: url('images/skills-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .header p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .container {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #skills h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #skills ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        #skills ul li {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #skills ul li i {
+            margin-right: 10px;
+        }
+        .skill-bar {
+            width: 80%;
+            background-color: #333;
+            border-radius: 5px;
+            margin: 10px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .skill-bar span {
+            display: block;
+            height: 20px;
+            background-color: #7BD3EA;
+            width: 0;
+            animation: fillBar 2s forwards;
+        }
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: var(--skill-level); }
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #7BD3EA;
+            font-size: 2rem;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-media a:hover {
+            color: #61b2d4;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <marquee><h1>Skills</h1></marquee>
+        <p>Web Developer | Designer | Programmer</p>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> HTML & CSS
+                    <div class="skill-bar" style="--skill-level: 90%;">
+                        <span></span>
+                    </div>
+                </li>
+                <li><i class="fas fa-laptop-code"></i> JavaScript
+                    <div class="skill-bar" style="--skill-level: 80%;">
+                        <span></span>
+                    </div>
+                </li>
+                <li><i class="fas fa-database"></i> SQL
+                    <div class="skill-bar" style="--skill-level: 70%;">
+                        <span></span>
+                    </div>
+                </li>
+                <li><i class="fas fa-paint-brush"></i> Graphic Design
+                    <div class="skill-bar" style="--skill-level: 75%;">
+                        <span></span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="social-media">
+            <h2>Follow Me</h2>
+            <a href="https://www.facebook.com/profile.php?id=100009397485753" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/0195745617" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/mieyysup/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        <marquee>&copy; 2024 Muhammad Nazmi. All rights reserved.</marquee>
+    </footer>
+</body>
+</html>

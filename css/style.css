@@ -1,0 +1,218 @@
+body {
+    background-color: #F6F7C4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #444;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #eee;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+section ul li i {
+    margin-right: 10px;
+    color: #333;
+}
+
+section .work-item, section .education-item {
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+}
+
+section form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section form input, section form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+section form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+section form button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/black.png'); /* Adjust the path if necessary */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: white; /* Ensure text is readable on dark background */
+}
+
+.about-section img {
+    border-radius: 50%;
+    max-width: 200px;
+    margin-bottom: 20px; /* Adds some space between the image and the text */
+}
+body {
+    background-color: #F6F7C4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    background: #FFEB3B;
+    color: black;
+}
+
+.video-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid #333;
+    border-radius: 10px;
+}
+
+.music-player {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.music-player audio {
+    width: 80%;
+    max-width: 800px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

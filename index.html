@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Personal Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Updated background color */
+            color: #fff; /* Updated text color */
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .header {
+            background-image: url('images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            position: relative; /* Ensure relative positioning for overlay */
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .header p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .work-text {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: #fff; /* Updated text color */
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .video-container video {
+            max-width: 100%;
+        }
+        .image-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .image-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff; /* Updated text color */
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .images img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Updated box shadow */
+        }
+        .testimonials {
+            background-color: #444; /* Darker background color */
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .testimonials blockquote {
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .testimonials blockquote::before {
+            content: open-quote;
+            font-size: 4rem;
+            color: #7BD3EA;
+            line-height: 0.1em;
+            margin-right: 5px;
+        }
+        .testimonials blockquote::after {
+            content: close-quote;
+            font-size: 4rem;
+            color: #7BD3EA;
+            line-height: 0.1em;
+            margin-left: 5px;
+        }
+        .testimonials cite {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-size: 1rem;
+        }
+        .skills {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff; /* Updated text color */
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .skills li {
+            margin: 10px;
+            font-size: 1.2rem;
+            color: #fff; /* Updated text color */
+            background-color: #333; /* Darker background color */
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Updated box shadow */
+            transition: transform 0.3s ease-in-out;
+        }
+        .skills li:hover {
+            transform: scale(1.1);
+        }
+        .music-player {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #7BD3EA;
+            font-size: 2rem;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-media a:hover {
+            color: #61b2d4;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="header">
+        <h1>Welcome to My Personal Website</h1>
+        <p>Web Developer | Designer | Programmer</p>
+    </div>
+
+    <div class="work-text">
+        <p>This is one of my works</p>
+    </div>
+
+    <div class="video-container">
+        <video controls autoplay muted>
+            <source src="videos/WhatsApp Video 2024-06-23 at 11.31.38 PM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="image-section">
+        <h2>Mieyyself</h2>
+        <div class="images">
+            <img src="images/pepel.png" alt="Image 1">
+            <img src="images/genting.png" alt="Image 2">
+            <img src="images/atas.png" alt="Image 3">
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h2>Quote</h2>
+        <blockquote>
+            "Success is not final, failure is not fatal: It is the courage to continue that counts." 
+            <cite>— Winston S. Churchill</cite>
+        </blockquote>
+    </div>
+
+    <div class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Graphic Design</li>
+            <li>Programming Languages</li>
+        </ul>
+    </div>
+
+    <div class="music-player">
+        <audio controls>
+                <source src="audio/tomp3.cc - Lil Uzi Vert  Watch This Lyrics  Pluggnb Remix.mp3" type="audio/ogg">
+                <source src="audio/tomp3.cc - Lil Uzi Vert  Watch This Lyrics  Pluggnb Remix.mp3" type="audio/mpeg">
+                your browser does not support the audio element.
+            </audio>
+    </div>
+
+    <div class="social-media">
+        <h2>Follow Me</h2>
+        <a href="https://www.facebook.com/profile.php?id=100009397485753" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/0195745617" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/mieyysup/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+       <marquee> <p>&copy; 2024 Muhammad Nazmi. All rights reserved.</p></marquee>
+    </footer>
+</body>
+</html>
